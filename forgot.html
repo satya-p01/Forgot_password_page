@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forgot Password Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvQTirbm1s4CAK-915ABpGDeiI0bdimLsZ9Q&s');
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      opacity: 95%;
+      margin: 0;
+    }
+    .forgot-password-container {
+      padding: 45px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      background-color: rgba(202, 199, 199, 0.4);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .forgot-password-container .form-control {
+      position: relative;
+      padding-left: 40px;
+    }
+    .forgot-password-container .form-control-icon {
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      color: #999;
+    }
+    .forgot-password-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #46698f;
+      color: white;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+    }
+    .forgot-password-icon i {
+      font-size: 36px;
+    }
+  </style>
+</head>
+<body>
+  <div class="forgot-password-container">
+    <div class="forgot-password-icon">
+      <i class="fa fa-key"></i>
+    </div>
+    <h2 class="text-center" style="color: rgb(4, 4, 4);">Forgot Password?</h2>
+    <p class="text-center">Don't worry! Enter your email and we will send you an OTP.</p>
+    <form class="form-horizontal" action="/forgot_password" method="POST" style="margin-top:20px;">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Email:</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" placeholder="Enter your email address" name="email" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10 text-center">
+          <button type="submit" class="btn btn-primary">Send OTP</button>
+          <a href="/login.html" class="btn btn-success">Back to Login</a>
+          <a href="#" class="btn btn-link">Resend OTP</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
